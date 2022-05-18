@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Fayed - Final Project</string>
+    <string name="studentId">ID: </string>
+    <string name="studentName">Name: </string>
+    <string name="studentSurname">Surname: </string>
+    <string name="studentFathers_name">Father’s name: </string>
+    <string name="studentNational_ID">National ID: </string>
+    <string name="studentDate_of_birth">Date of birth: </string>
+    <string name="studentGender">Gender: </string>
+    <string name="GenderM">M</string>
+    <string name="GenderF">F</string>
+    <string name="dateBTN">PICK DATE</string>
+    <string name="dateHint">enter date</string>
+    <string name="insertBttn">INSERT</string>
+    <string name="updateBTN">UPDATE</string>
+    <string name="deleteBttn">DELETE</string>
+    <string name="goToStudentListBTN">VIEW Firebase LIST</string>
+    <string name="goToSQLiteBTN">Go To SQLite</string>
+    <string name="goToWeatherBTN">Go To Weather ACTIVITY</string>
+    <string name="goToSQListBTN">View SQLite List</string>
+    <string name="goToFirebaseTN">Go To Firebase</string>
+    <string name="weatherTv">Check weather in different city</string>
+    <string name="weatherEt">enter city name</string>
+    <string name="getWeatherBTN">Get weather</string>
+    <string name="syncDataBTN">SYNC DATA</string>
+    <string name="viewAllBTN">VIEW ALL</string>
+    <string name="viewByIdBTN">VIEW BY ID</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_firebase.xml" value="0.35572916666666665" />
+        <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_dbactivity.xml" value="0.35208333333333336" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_firebase.xml" value="0.33796296296296297" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_firebase_full_list.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_firebase_single_item.xml" value="0.28177083333333336" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_my_sqlite.xml" value="0.2462962962962963" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite_full_list.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite_list.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite_single_item.xml" value="0.35025641025641024" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_student_list.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_weather.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/sqlite_single_item.xml" value="0.35572916666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
