@@ -44,18 +44,12 @@ public class FirebaseActivity extends AppCompatActivity {
 
         // change the text of the app bar title
         getSupportActionBar().setTitle("Firebase");
+        getSupportActionBar().setSubtitle("Fayed - 200002");
 
         // display home button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // onclick action for the home button
         getSupportActionBar().setHomeButtonEnabled(true);
-
-        // change icon of the home button
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.home_icon);
-
-        // add subtitle to the app bar
-        getSupportActionBar().setSubtitle("Fayed - Final Project");
 
 
         //  icon object
@@ -185,7 +179,6 @@ public class FirebaseActivity extends AppCompatActivity {
                 } else {
                     updateById(_studentID, _studentName, _studentFathersName, _studentSurname, _studentNationalId, _studentGender, _studentBirthDate);
                 }
-
             }
         });
 
@@ -224,16 +217,6 @@ public class FirebaseActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        // goToWeatherBTN
-//        goToWeatherBTN.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(FirebaseActivity.this, WeatherMainActivity.class);
-//                intent.putExtra("city", city);
-//                startActivity(intent);
-//            }
-//        });
 
     }
 
@@ -276,7 +259,6 @@ public class FirebaseActivity extends AppCompatActivity {
 
     // update student by ID
     public void updateById(String _studentID, String _studentName, String _studentFathersName, String _studentSurname, String _studentNationalId, String studentGender, String _studentBirthDate) {
-        // loop through all students
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -318,7 +300,6 @@ public class FirebaseActivity extends AppCompatActivity {
 
     // delete student by ID
     public void deleteById(String _studentID) {
-        // loop through all students
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_firebase.xml" value="0.35572916666666665" />
+        <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_firebase_full_list.xml" value="0.35572916666666665" />
+        <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_firebase_single_item.xml" value="0.5" />
         <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite.xml" value="0.3333333333333333" />
+        <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite_full_list.xml" value="0.35572916666666665" />
+        <entry key="..\:/Uni Subjects/SE Y3 P2/Mob/Assignment-Project/Project/Mob Project/Fayed_Final_Project/app/src/main/res/layout/activity_sqlite_single_item.xml" value="0.35572916666666665" />
         <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_dbactivity.xml" value="0.35208333333333336" />
         <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_firebase.xml" value="0.33796296296296297" />
         <entry key="..\:/Users/mfayed/Desktop/Fayed_Final_Project/app/src/main/res/layout/activity_firebase_full_list.xml" value="0.35572916666666665" />

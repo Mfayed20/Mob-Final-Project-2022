@@ -33,23 +33,15 @@ public class SQLiteListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite_full_list);
 
-        // change the text of the app bar title
         getSupportActionBar().setTitle("SQLite Student List");
+        getSupportActionBar().setSubtitle("Fayed - 200002");
 
         // display home button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // onclick action for the home button
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        // change icon of the home button
-//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.home_icon);
 
-        // add subtitle to the app bar
-        getSupportActionBar().setSubtitle("Fayed - Final Project");
-
-
-
+        // onclick for the items in list
         onclickInterface = position -> {
             Toasty.info(SQLiteListActivity.this, "Full Name: " + studentList.get(position).getName() + " " + studentList.get(position).getSurname(), Toast.LENGTH_SHORT).show();
             StudentAdapter.notifyDataSetChanged();
@@ -78,8 +70,6 @@ public class SQLiteListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
-//            Intent intent = new Intent(SQLiteListActivity.this, WeatherMainActivity.class);
-//            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

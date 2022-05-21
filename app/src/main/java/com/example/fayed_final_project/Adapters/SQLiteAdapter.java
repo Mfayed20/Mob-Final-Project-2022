@@ -34,6 +34,8 @@ public class SQLiteAdapter extends RecyclerView.Adapter<SQLiteAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
+        // did some change here
         Student student = list.get(position);
         holder.id.setText(student.getId());
         holder.studentName.setText(student.getName());
@@ -48,6 +50,7 @@ public class SQLiteAdapter extends RecyclerView.Adapter<SQLiteAdapter.MyViewHold
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
+        // did some change here
         TextView id, studentName;
         LinearLayout sqliteItem;
 

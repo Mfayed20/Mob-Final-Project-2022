@@ -93,7 +93,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 
-    // return all data in ArrayList
+    // return all data in ArrayList for SQL list activity
     public ArrayList<Student> getAllData() {
         ArrayList<Student> studentList = new ArrayList<>();
         SQLiteDatabase db = this.getWritableDatabase();

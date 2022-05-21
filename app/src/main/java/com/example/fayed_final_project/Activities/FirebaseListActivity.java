@@ -26,29 +26,18 @@ public class FirebaseListActivity extends AppCompatActivity {
     private ArrayList<Student> list;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
-    // first time I don't need to check if data is the same or not
-    private boolean firstTime = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firebase_full_list);
 
-        // change the text of the app bar title
         getSupportActionBar().setTitle("Firebase Student List");
+        getSupportActionBar().setSubtitle("Fayed - 200002");
 
         // display home button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // onclick action for the home button
         getSupportActionBar().setHomeButtonEnabled(true);
-
-        // add subtitle to the app bar
-        getSupportActionBar().setSubtitle("Fayed - Final Project");
-
-        // change icon of the home button
-//        getSupportActionBar().setHomeAsUpIndicator(R.drawable.home_icon);
-
 
 
         database = FirebaseDatabase.getInstance("https://fayed---final-project-default-rtdb.asia-southeast1.firebasedatabase.app/");
@@ -66,27 +55,11 @@ public class FirebaseListActivity extends AppCompatActivity {
             @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                int i=0;
+                list.clear(); //* added this
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     Student student = dataSnapshot.getValue(Student.class);
-                    // compare the student id and name from firebase with the list student
-                    // if different remove from the list and add student from firebase
-                    // if same do nothing
-
-                    // check if the student is not null
-                    if (student != null) {
-                        if (firstTime) {
-                            list.add(student);
-                        } else {
-                            if (!list.get(i).getId().equals(student.getId()) || !list.get(i).getName().equals(student.getName())) {
-                                list.remove(i);
-                                list.add(i, student);
-                            }
-                        }
-                        i++;
-                    }
+                    list.add(student); //* added this
                 }
-                firstTime=false;
                 firebaseAdapter.notifyDataSetChanged();
             }
             @Override
@@ -100,8 +73,6 @@ public class FirebaseListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
-//            Intent intent = new Intent(FirebaseListActivity.this, WeatherMainActivity.class);
-//            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

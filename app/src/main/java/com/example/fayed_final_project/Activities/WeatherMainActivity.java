@@ -28,22 +28,19 @@ public class WeatherMainActivity extends AppCompatActivity {
     private ImageView weatherIconImageView;
     private TextView temperatureTv, weatherTv, humidityTv, cityTv;
     private EditText weatherEt;
-    final private String LOG = "Fayed";
     private String iconUrl;
-    private boolean firstTime = true;
     private String city = "Berlin";
+    private boolean firstTime = true;
+    final private String LOG = "Fayed";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
 
-        // change the text of the app bar title
+        // title/ subtitle
         getSupportActionBar().setTitle("Weather API");
-
-        // add subtitle to the app bar
-        getSupportActionBar().setSubtitle("Fayed - Final Project");
-
+        getSupportActionBar().setSubtitle("Fayed - 200002");
 
         //link graphical items to variables
         temperatureTv = findViewById(R.id.temperatureTv);
@@ -69,7 +66,7 @@ public class WeatherMainActivity extends AppCompatActivity {
         getWeatherBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // check if the user entered a city
+
                 if (!weatherEt.getText().toString().isEmpty()) {
                     city = weatherEt.getText().toString();
                     generateURL(city);
@@ -121,7 +118,7 @@ public class WeatherMainActivity extends AppCompatActivity {
         });
     }
 
-    // create openweathermap URL
+    // generating openWeatherMap URL
     public void generateURL(String city) {
         String key = "ceae73f848981fda58066979faec2f2e";
         // we"ll make HTTP request to this URL to retrieve weather conditions
@@ -129,9 +126,8 @@ public class WeatherMainActivity extends AppCompatActivity {
         getWeather(url);
     }
 
-    // get weather from openweathermap
+    // get weather from openWeatherMap
     public void getWeather(String url) {
-        // get the weather (“clouds”), along with temperature and humidity
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -140,14 +136,16 @@ public class WeatherMainActivity extends AppCompatActivity {
                     JSONArray weather = response.getJSONArray("weather");
                     JSONObject weatherObj = weather.getJSONObject(0);
                     String weatherCondition = weatherObj.getString("main");
+
                     // get the temperature
                     JSONObject main = response.getJSONObject("main");
                     String temperature = main.getString("temp");
                     // get the humidity
                     String humidity = main.getString("humidity");
+
                     // get the city
-//                    String city = response.getString("name");
                     city = response.getString("name");
+
                     // get the icon
                     String iconCode = weatherObj.getString("icon");
 

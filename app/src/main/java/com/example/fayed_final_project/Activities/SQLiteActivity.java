@@ -35,22 +35,13 @@ public class SQLiteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite);
 
-        // change the text of the app bar title
         getSupportActionBar().setTitle("SQLite");
+        getSupportActionBar().setSubtitle("Fayed - 200002");
 
         // display home button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // onclick action for the home button
         getSupportActionBar().setHomeButtonEnabled(true);
-
-        // change icon of the home button
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.home_icon);
-
-        // add subtitle to the app bar
-        getSupportActionBar().setSubtitle("Fayed - Final Project");
-
-
 
         //  icon object
         ImageView weatherIconImageVDb = findViewById(R.id.weatherIconInDb);
@@ -109,7 +100,7 @@ public class SQLiteActivity extends AppCompatActivity {
             }
         });
 
-        // viewByIdSQLBTN
+        // view by Id SQLBTN
         viewByIdSQLBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -145,7 +136,7 @@ public class SQLiteActivity extends AppCompatActivity {
         });
 
 
-        // display whole Database
+        // view all Database
         viewAllSQLBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -275,7 +266,7 @@ public class SQLiteActivity extends AppCompatActivity {
             }
         });
 
-        // fitch (sync) data from SQLite to Firebase
+        // sync data from Firebase to SQLite
         syncDataBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -305,16 +296,6 @@ public class SQLiteActivity extends AppCompatActivity {
                startActivity(intent);
            }
        });
-
-        // go to goToWeatherBTN
-//        goToWeatherBTN.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(SQLiteActivity.this, WeatherMainActivity.class);
-//                intent.putExtra("city", city);
-//                startActivity(intent);
-//            }
-//        });
 
     }
 
