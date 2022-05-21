@@ -30,49 +30,13 @@ public class Firebase extends AppCompatActivity {
         super.onCreate(savedInstanceState);
     }
 
-//    public void insertData(String _studentID, String _studentName, String _studentFathersName, String _studentSurname, String _studentNationalId, String studentGender, String _studentBirthDate) {
-//        Student student = new Student(_studentID, _studentName, _studentFathersName, _studentSurname, _studentNationalId, studentGender, _studentBirthDate);
-//        String stuNum = _studentID.substring(3);
-//        myRef.child("NUM "+stuNum).setValue(student);
-//    }
-//
-//    // update student by ID
-//    public void updateById(String _studentID, String _studentName, String _studentFathersName, String _studentSurname, String _studentNationalId, String studentGender, String _studentBirthDate) {
-//         Student student = new Student(_studentID, _studentName, _studentFathersName, _studentSurname, _studentNationalId, studentGender, _studentBirthDate);
-//         String stuNum = _studentID.substring(3);
-//         myRef.child("NUM "+stuNum).setValue(student);
-//    }
-//
-//    // delete student by ID
-//    public void deleteById(String _studentID) {
-//        String stuNum = _studentID.substring(3);
-//        myRef.child("NUM "+stuNum).removeValue();
-//    }
-//
-//    // get student by ID
-//    public void getDataById(String _studentID) {
-//        String stuNum = _studentID.substring(3);
-//        myRef.child("NUM "+stuNum).addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                Student student = dataSnapshot.getValue(Student.class);
-//                Log.d(LOG, "onDataChange: "+student.getName());
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//    }
-
     // Save Data From Firebase to SQLite Android
     public void saveDataToSQLite(SQLiteHelper db) {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 try {
-                    // clear the table
+                    // clear the db
                     db.deleteAllData();
                     // loop through the data and insert it into the database
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
